@@ -1,0 +1,15 @@
+﻿/***top menu****************************************************************************/
+/*#nav2{ margin-top:0px;margin-left:50px;}    
+#drop2{width:20%;margin-top:20px; border-radius:4px;box-shadow:none;}
+.thumb-dropdown .dropdown-menu > li {position: relative;}
+.thumb-dropdown .dropdown-menu > li > a .thumbnail { position: absolute; left: 100%;top: -10px;display: none;    width: 350px; height: auto;margin-left: 5px;}
+.thumb-dropdown .dropdown-menu > li > a:hover .thumbnail  {display: block;}*/
+/***************************************************************************************/
+
+html, body{  height: 100%;}
+
+.cke_dialog_ui_input_textarea,.cke_pbckcode_ace,.ace_text-input{direction:ltr;}
+.cke_pbckcode_ace.ace_editor *{text-align:left !important}
+.ace_layer, .cke_reset_all .ace_layer, .cke_reset_all .ace_content,.ace_content, .ace_line, .ace_identifier, .ace_scroller * {white-space: pre!important;}
+.cke_pbckcode_form .cke_dialog_ui_input_select select {direction:ltr;padding-right:10px}
+.cke_dialog_body label {padding-left:10px;}
