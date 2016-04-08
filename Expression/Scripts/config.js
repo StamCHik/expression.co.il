@@ -13,7 +13,7 @@ CKEDITOR.editorConfig = function( config ) {
     //    // your other buttons here
     //    // get information about available buttons here: bhttp://docs.ckeditor.com/?mobile=/guide/dev_toolbar
     //];
-
+    config.removeButtons = 'Save';
     // Toolbar groups configuration.
     config.toolbarGroups = [
         { name: 'document', groups: ['mode', 'document', 'doctools'] },
@@ -39,11 +39,34 @@ CKEDITOR.editorConfig = function( config ) {
     config.skin = 'office2013';
     // config.uiColor = '#AADC6E';
 	 
-    config.extraPlugins = 'chart,find,notification,autosave,mathedit,panelbutton,quicktable,tableresize,pbckcode';
+    config.extraPlugins = 'inlinesave,chart,find,notification,autosave,mathedit,panelbutton,quicktable,tableresize,pbckcode,wordcount,openfile';
 	 config.pbckcode = {
 	     highlighter: 'PRETTIFY',
 	     theme: 'tomorrow_night',
 	     js: "/Scripts/ace/",
          lang:'he'
+	 };
+
+	
+	 var docName = { DocumentName: 'savedDoc' };
+	 config.inlinesave = {
+	     postUrl: '/SaveCKEditor',
+	     postData: docName,
+	     onSave: function (editor) {
+	         var userInput = prompt("Please enter file name", "expression");
+	         if (userInput) {
+	             docName.DocumentName = userInput;
+	            console.log('clicked save', editor); return true;
+	         }
+	         return false;
+	     },
+	     onSuccess: function (editor, data) {
+	         var blob = new Blob([data], { type: "text/plain;charset=utf-8" });
+	         saveAs(blob, docName.DocumentName + '.txt');	        
+	         console.log('save successful', editor, data);
+	     },
+	     onFailure: function (editor, status, request) { console.log('save failed', editor, status, request); },
+	     useJSON: true,
+	     useColorIcon: false
 	 };
 };

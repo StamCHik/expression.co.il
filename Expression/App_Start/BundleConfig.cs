@@ -21,7 +21,8 @@ namespace Expression
                       "~/Scripts/respond.js",
                       "~/Scripts/ckeditor.js",                      
                       "~/Scripts/mathquill.js",
-                       "~/Scripts/ckMyCode.js"));
+                       "~/Scripts/ckMyCode.js",
+                       "~/Scripts/FileSaver.min.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",

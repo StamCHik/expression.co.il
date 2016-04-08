@@ -164,16 +164,14 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
-    <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OpenCKEditorController.cs" />
+    <Compile Include="Controllers\SaveCKEditorController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\SaveCKEditorModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -539,6 +537,7 @@
     <Content Include="Scripts\ckMyCode.js" />
     <Content Include="Scripts\config.js" />
     <Content Include="Scripts\contents.css" />
+    <Content Include="Scripts\FileSaver.min.js" />
     <Content Include="Scripts\font\Symbola.svg" />
     <Content Include="Scripts\jquery-2.2.1.js" />
     <Content Include="Scripts\jquery-2.2.1.min.js" />
@@ -916,6 +915,9 @@
     <Content Include="Scripts\plugins\iframe\images\placeholder.png" />
     <Content Include="Scripts\plugins\image\dialogs\image.js" />
     <Content Include="Scripts\plugins\image\images\noimage.png" />
+    <Content Include="Scripts\plugins\inlinesave\images\inlinesave-color.svg" />
+    <Content Include="Scripts\plugins\inlinesave\images\inlinesave.svg" />
+    <Content Include="Scripts\plugins\inlinesave\plugin.js" />
     <Content Include="Scripts\plugins\lineutils\dev\dnd.html" />
     <Content Include="Scripts\plugins\lineutils\dev\magicfinger.html" />
     <Content Include="Scripts\plugins\lineutils\plugin.js" />
@@ -955,6 +957,8 @@
     <Content Include="Scripts\plugins\notification\lang\zh-cn.js" />
     <Content Include="Scripts\plugins\notification\lang\zh.js" />
     <Content Include="Scripts\plugins\notification\plugin.js" />
+    <Content Include="Scripts\plugins\openfile\icons\openfile.png" />
+    <Content Include="Scripts\plugins\openfile\plugin.js" />
     <Content Include="Scripts\plugins\pagebreak\images\pagebreak.gif" />
     <Content Include="Scripts\plugins\panelbutton\plugin.js" />
     <Content Include="Scripts\plugins\pastefromword\filter\default.js" />
@@ -1226,6 +1230,32 @@
     <Content Include="Scripts\plugins\widget\lang\zh-cn.js" />
     <Content Include="Scripts\plugins\widget\lang\zh.js" />
     <Content Include="Scripts\plugins\widget\plugin.js" />
+    <Content Include="Scripts\plugins\wordcount\css\wordcount.css" />
+    <Content Include="Scripts\plugins\wordcount\lang\ar.js" />
+    <Content Include="Scripts\plugins\wordcount\lang\ca.js" />
+    <Content Include="Scripts\plugins\wordcount\lang\da.js" />
+    <Content Include="Scripts\plugins\wordcount\lang\de.js" />
+    <Content Include="Scripts\plugins\wordcount\lang\el.js" />
+    <Content Include="Scripts\plugins\wordcount\lang\en.js" />
+    <Content Include="Scripts\plugins\wordcount\lang\es.js" />
+    <Content Include="Scripts\plugins\wordcount\lang\fi.js" />
+    <Content Include="Scripts\plugins\wordcount\lang\fr.js" />
+    <Content Include="Scripts\plugins\wordcount\lang\he.js" />
+    <Content Include="Scripts\plugins\wordcount\lang\hr.js" />
+    <Content Include="Scripts\plugins\wordcount\lang\it.js" />
+    <Content Include="Scripts\plugins\wordcount\lang\jp.js" />
+    <Content Include="Scripts\plugins\wordcount\lang\nl.js" />
+    <Content Include="Scripts\plugins\wordcount\lang\no.js" />
+    <Content Include="Scripts\plugins\wordcount\lang\pl.js" />
+    <Content Include="Scripts\plugins\wordcount\lang\pt-br.js" />
+    <Content Include="Scripts\plugins\wordcount\lang\pt.js" />
+    <Content Include="Scripts\plugins\wordcount\lang\ru.js" />
+    <Content Include="Scripts\plugins\wordcount\lang\sv.js" />
+    <Content Include="Scripts\plugins\wordcount\lang\tr.js" />
+    <Content Include="Scripts\plugins\wordcount\lang\zh-cn.js" />
+    <Content Include="Scripts\plugins\wordcount\plugin.js" />
+    <Content Include="Scripts\plugins\wordcount\samples\wordcount.html" />
+    <Content Include="Scripts\plugins\wordcount\samples\wordcountWithMaxCount.html" />
     <Content Include="Scripts\plugins\wsc\dialogs\ciframe.html" />
     <Content Include="Scripts\plugins\wsc\dialogs\tmpFrameset.html" />
     <Content Include="Scripts\plugins\wsc\dialogs\wsc.css" />
@@ -1348,6 +1378,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\OpenCKEditor\" />
+    <Folder Include="Views\Save\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config">
