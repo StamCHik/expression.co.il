@@ -13,3 +13,7 @@ html, body{  height: 100%;}
 .ace_layer, .cke_reset_all .ace_layer, .cke_reset_all .ace_content,.ace_content, .ace_line, .ace_identifier, .ace_scroller * {white-space: pre!important;}
 .cke_pbckcode_form .cke_dialog_ui_input_select select {direction:ltr;padding-right:10px}
 .cke_dialog_body label {padding-left:10px;}
+
+.body-content {
+    width: auto !important;
+}

@@ -814,12 +814,14 @@
     <Content Include="Scripts\plugins\dialog\dialogDefinition.js" />
     <Content Include="Scripts\plugins\div\dialogs\div.js" />
     <Content Include="Scripts\plugins\eqneditor\dialogs\eqneditor.js" />
+    <Content Include="Scripts\plugins\eqneditor\dialogs\lang\he.js" />
     <Content Include="Scripts\plugins\eqneditor\dialogs\lang\en.js" />
     <Content Include="Scripts\plugins\eqneditor\dialogs\lang\_notes\dwsync.xml" />
     <Content Include="Scripts\plugins\eqneditor\dialogs\_notes\dwsync.xml" />
     <Content Include="Scripts\plugins\eqneditor\icons\eqneditor.png" />
     <Content Include="Scripts\plugins\eqneditor\icons\_notes\dwsync.xml" />
     <Content Include="Scripts\plugins\eqneditor\lang\en.js" />
+    <Content Include="Scripts\plugins\eqneditor\lang\he.js" />
     <Content Include="Scripts\plugins\eqneditor\lang\_notes\dwsync.xml" />
     <Content Include="Scripts\plugins\eqneditor\plugin.js" />
     <Content Include="Scripts\plugins\eqneditor\_notes\dwsync.xml" />

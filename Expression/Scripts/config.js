@@ -33,7 +33,7 @@ CKEDITOR.editorConfig = function( config ) {
         { name: 'others' },
         { name: 'about' }
     ];
-
+    config.contentsCss = CKEDITOR.plugins.getPath('pbckcode') + 'lib/prettify.css';
     config.language = 'he';
     config.language_list = ['he:Hebrew:rtl', 'pt:Portuguese', 'de:German', 'ar:Arabic:rtl', 'fr:French', 'es:Spanish', 'en:English'];
     config.skin = 'office2013';
@@ -47,8 +47,7 @@ CKEDITOR.editorConfig = function( config ) {
          lang:'he'
 	 };
 
-	
-	 var docName = { DocumentName: 'savedDoc' };
+	 var docName = { DocumentName: 'savedDoc'};
 	 config.inlinesave = {
 	     postUrl: '/SaveCKEditor',
 	     postData: docName,
@@ -56,12 +55,12 @@ CKEDITOR.editorConfig = function( config ) {
 	         var userInput = prompt("Please enter file name", "expression");
 	         if (userInput) {
 	             docName.DocumentName = userInput;
-	            console.log('clicked save', editor); return true;
+	             console.log('clicked save', editor); return true;	            
 	         }
 	         return false;
 	     },
 	     onSuccess: function (editor, data) {
-	         var blob = new Blob([data], { type: "text/plain;charset=utf-8" });
+	         var blob = new Blob([CKEDITOR.instances.editor1.document.getBody().getHtml()], { type: "text/plain;charset=utf-8" });
 	         saveAs(blob, docName.DocumentName + '.txt');	        
 	         console.log('save successful', editor, data);
 	     },

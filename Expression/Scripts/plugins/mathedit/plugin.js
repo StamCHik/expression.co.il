@@ -39,7 +39,7 @@ CKEDITOR.plugins.add( pluginName, {
 			requiredContent: 'img[src,title,class](mathImg)'
 		}));
 		editor.ui.addButton( pluginName, {
-			label : 'Insert math',
+			label : 'להכניס נוסחה',
 			command : pluginCmd,
 			toolbar: 'insert',
 			icon: iconPath
@@ -48,7 +48,7 @@ CKEDITOR.plugins.add( pluginName, {
 		if ( editor.contextMenu ) {
 			editor.addMenuGroup( 'Math' );
 			editor.addMenuItem( pluginName, {
-				label: 'Edit function',
+				label: 'עריכת נוסחה',
 				icon: iconPath,
 				command: pluginCmd,
 				group: 'Math'
@@ -91,7 +91,7 @@ CKEDITOR.plugins.add( pluginName, {
 			runningId += 1;
 			return {
 
-			    title: '������ �����',
+			    title: 'להוסיף נוסחה',
 				minWidth : 400,
 				minHeight : 200,
 				contents : [

@@ -87,7 +87,6 @@ CKEDITOR.plugins.add('pbckcode', {
             CKEDITOR.document.appendStyleSheet(plugin.path + "dialogs/style.css");
             
         });
-
         editor.on('mode', function (event) {
             if (editor.mode == 'wysiwyg')
                 insertResources(editor);
@@ -170,11 +169,11 @@ function insertResources(editor) {
     }));
 
 
-    innerHead.append(CKEDITOR.document.createElement('link', {
-        attributes: {
-            rel: 'stylesheet',
-            href: path + 'lib/prettify.css'
-        }
-    }));
+    //innerHead.append(CKEDITOR.document.createElement('link', {
+    //    attributes: {
+    //        rel: 'stylesheet',
+    //        href: path + 'lib/prettify.css'
+    //    }
+    //}));
 }
 

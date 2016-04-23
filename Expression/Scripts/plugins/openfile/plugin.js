@@ -24,7 +24,13 @@
                 processData: false, // Don't process the files
                 contentType: false, // Set content type to false as jQuery will tell the server its a query string request
                 success: function (data, textStatus, jqXHR) {
-                    editor.setData(data.result);    
+                    if (data.result != undefined && data.result != '') {                       
+                        //var html = $(data.result);
+                        //html.html(prettyPrintOne(data.result, $(data.result).attr("data-pbcklang"), true)); 
+                        editor.updateElement();
+                        editor.setData('');
+                        editor.document.getBody().appendHtml(data.result);                       
+                    }
                     $("#yourinputname" ).val("");
                 },
                 error: function (jqXHR, textStatus, errorThrown) {
@@ -69,8 +75,7 @@
                 dataType: 'json',
                 processData: false, // Don't process the files
                 contentType: false, // Set content type to false as jQuery will tell the server its a query string request
-                success: function (data, textStatus, jqXHR) {
-                    debugger;
+                success: function (data, textStatus, jqXHR) {                   
                 },
                 error: function (jqXHR, textStatus, errorThrown) {
                     // Handle errors here

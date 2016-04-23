@@ -18,9 +18,7 @@ namespace Expression.Controllers
             if (String.IsNullOrWhiteSpace(data.editabledata))
                 return null;
 
-            MemoryStream stream = new MemoryStream(Encoding.UTF8.GetBytes(data.editabledata)); 
-            string suggestedFilename = string.Format("CKEditor_{0}.txt", data.DocumentName);
-
+            MemoryStream stream = new MemoryStream(Encoding.UTF8.GetBytes(data.editabledata));             
 
             return new FileStreamResult(stream, "application/octet-stream");
         }

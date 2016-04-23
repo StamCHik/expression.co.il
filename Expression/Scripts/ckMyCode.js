@@ -10,7 +10,7 @@ if (CKEDITOR.env.ie && CKEDITOR.env.version < 9)
 
 // The trick to keep the editor in the sample quite small
 // unless user specified own height.
-CKEDITOR.config.height = 150;
+CKEDITOR.config.height = 600;
 CKEDITOR.config.width = 'auto';
 
 var initSample = (function () {
@@ -30,7 +30,7 @@ var initSample = (function () {
             // TODO we can consider displaying some info box that
             // without wysiwygarea the classic editor may not work.
         }
-
+       // editor.resize($("#elem").width(), $("#elem").height());
         
     };
 
