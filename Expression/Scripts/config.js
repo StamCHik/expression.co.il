@@ -13,7 +13,7 @@ CKEDITOR.editorConfig = function( config ) {
     //    // your other buttons here
     //    // get information about available buttons here: bhttp://docs.ckeditor.com/?mobile=/guide/dev_toolbar
     //];
-    config.removeButtons = 'Save';
+    config.removeButtons = 'Save,Preview';
     // Toolbar groups configuration.
     config.toolbarGroups = [
         { name: 'document', groups: ['mode', 'document', 'doctools'] },
@@ -33,13 +33,13 @@ CKEDITOR.editorConfig = function( config ) {
         { name: 'others' },
         { name: 'about' }
     ];
-    config.contentsCss = CKEDITOR.plugins.getPath('pbckcode') + 'lib/prettify.css';
+    config.contentsCss = [CKEDITOR.plugins.getPath('pbckcode') + 'lib/prettify.css', '/Content/Site.css'];
     config.language = 'he';
     config.language_list = ['he:Hebrew:rtl', 'pt:Portuguese', 'de:German', 'ar:Arabic:rtl', 'fr:French', 'es:Spanish', 'en:English'];
     config.skin = 'office2013';
     // config.uiColor = '#AADC6E';
-	 
-    config.extraPlugins = 'inlinesave,chart,find,notification,autosave,mathedit,panelbutton,quicktable,tableresize,pbckcode,wordcount,openfile';
+    config.mathJaxLib = '//cdn.mathjax.org/mathjax/2.2-latest/MathJax.js?config=TeX-AMS_HTML';
+    config.extraPlugins = 'inlinesave,chart,find,notification,autosave,mathedit,panelbutton,quicktable,tableresize,pbckcode,wordcount,openfile,mathjax';
 	 config.pbckcode = {
 	     highlighter: 'PRETTIFY',
 	     theme: 'tomorrow_night',
