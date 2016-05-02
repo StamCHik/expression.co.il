@@ -18,11 +18,10 @@ namespace Expression
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js",
-                      "~/Scripts/ckeditor.js",                      
+                      "~/Scripts/respond.js",                     
                       "~/Scripts/mathquill.js",
-                       "~/Scripts/ckMyCode.js",
-                       "~/Scripts/FileSaver.min.js"));
+                      "~/Scripts/FileSaver.min.js",
+                       "~/Scripts/ckMyCode.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
